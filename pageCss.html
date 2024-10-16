@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Download Example</title>
+    <link rel="stylesheet" href="pagehtml.css">
+</head>
+<body>
+   <h1 style="color: black;font-size: x-large; text-align: left;margin-left: 30px;">Css3 haters.<p style="margin-left: 40px;">&#128522;</p></h1>
+
+    <h1>CSS</h1>
+    <a id="download-link" href="CSS.pdf" download="Css-Book-1.pdf">Download File v1</a>
+    <a id="download-link" href="css-programming-cookbook.pdf" download="Css-Book-2.pdf">Download File v2</a>
+ 
+
+    <div class="container">
+        <nav>
+         <input id="toggle" type="checkbox" checked>
+        <h2>Lessons</h2>
+      <ul>
+        <li><a href="#chapter1">Chapter 01</a></li>
+        <li><a href="#chapter2">Chapter 02</a></li>
+        <li><a href="#chapter3">Chapter 03</a></li>
+        <li><a href="#chapter4">Chapter 04</a></li>
+      </ul>
+   </nav>
+     <h2 id="chapter1">chapter1</h2>
+     <p>
+        Introduction to CSS<br>
+        Overview<br>
+        What is CSS?<br>
+        A stylesheet language used to describe the presentation of an HTML document.
+        CSS controls layout, colors, fonts, and overall visual aesthetics of web pages.
+        Key Concepts<br>
+        CSS Syntax:<br>
+        Understanding the basic syntax: selectors, properties, and values.
+        Example:<br> <mark>selector { property: value; }</mark>.
+        Types of CSS:<br>
+        Inline CSS: Applying styles directly within an HTML element using the <mark>style</mark> attribute.
+        Internal CSS: Adding styles within a <mark>&lt;style&gt;</mark> tag in the <mark>&lt;head&gt;</mark> section of the HTML document.
+        External CSS: Linking an external stylesheet using the <mark>&lt;link&gt;</mark> tag.
+
+     </p>
+    
+     <h2 id="chapter2">chapter2</h2>
+     <p>Overview<br>
+        Exploring various selectors and properties to apply styles effectively.
+        Key Concepts
+        CSS Selectors:<br>
+        
+        Element Selector: Targeting specific HTML elements (e.g., <mark>p</mark>).
+        Class Selector: Targeting elements with a specific class using a dot (e.g., <mark>.classname</mark>).
+        ID Selector: Targeting elements with a specific ID using a hash (e.g., <mark>#idname</mark>).
+        Attribute Selector: Targeting elements based on attributes (e.g., <mark>[type="text"]</mark>).
+        Pseudo-classes and Pseudo-elements: Understanding :hover, :first-child, and <mark>::before</mark>.
+        CSS Properties:<br>
+        
+        Color and Background: Using <mark>color</mark>, <mark>background-color</mark>, and <mark>background-image</mark>.
+        Font Properties: Adjusting text appearance with <mark>font-family</mark>, <mark>font-size</mark>, <mark>font-weight</mark>, and <mark>line-height</mark>.
+        Box Model: Understanding <mark>margin</mark>, <mark>border</mark>, <mark>padding</mark>, and <mark>width</mark>/<mark>height</mark> properties.
+     <h2 id="chapter3">chapter3</h2>
+     <p>
+        Overview<br>
+        Learning various layout techniques and principles for responsive design.
+        Key Concepts<br>
+        Positioning:<br>
+        Understanding different positioning methods: <mark>static</mark>, <mark>relative</mark>, <mark>absolute</mark>, and <mark>fixed</mark>.
+        Flexbox:<br>
+        Using the Flexbox layout model for responsive design with properties like <mark>display: flex</mark>, <mark>flex-direction</mark>, and <mark>justify-content</mark>.
+        Grid Layout:<br>
+        Understanding the CSS Grid layout system for complex layouts using <mark>display: grid</mark>, <mark>grid-template-columns</mark>, and <mark>grid-gap</mark>.
+        Media Queries:<br>
+        Implementing media queries to create responsive designs that adapt to different screen sizes.
+        Example:<br> <mark>@media (max-width: 600px) { /* styles here */ }</mark>.
+     </p>
+      
+     <h2 id="chapter4">chapter4</h2>
+     <p>
+        Overview<br>
+        Focusing on writing efficient CSS and exploring advanced features.
+        Key Concepts<br>
+        Best Practices:<br>
+        Organizing CSS with comments, consistent naming conventions, and modular approaches.
+        Avoiding CSS specificity issues and using the cascading nature of styles effectively.
+        CSS Preprocessors:<br>
+        Introduction to preprocessors like LESS and SASS for writing more maintainable CSS.
+        Understanding features like variables, nesting, and mixins.
+        Animations and Transitions:
+        Creating smooth animations using <mark>transition</mark> and <mark>@keyframes</mark>.
+        Example:<br> <mark>transition: all 0.3s ease;</mark> for hover effects.
+        CSS Variables:
+        Using CSS custom properties (variables) for easier management of styles.
+        Example:<br> <mark>--main-color: #3498db;</mark> and using it with <mark>color: var(--main-color);</mark>.
+     </p>
+     
+   </div>
+ 
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+        .nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #fff;
+            font-size: x-large;
+            margin-left: 110px;
+            transition: .7s ease-in-out;
+        }
+        .nav a:hover {
+            font-size: xx-large;
+            color: rgb(253, 181, 26);
+        }
+        header {
+            position: fixed;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            padding: 10px 100px;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+            background: #000000;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F2F3EB;
+        }
+        .wrapper {
+            position: relative;
+            max-width: 430px;
+            width: 100%;
+            background: #fff;
+            padding: 34px;
+            border-radius: 6px;
+            margin-top: 35px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.155);
+        }
+        .wrapper h2 {
+            position: relative;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+        }
+        .wrapper form {
+            margin-top: 30px;
+        }
+        .wrapper form .input-box {
+            height: 52px;
+            margin: 18px 0;
+        }
+        form .input-box input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            padding: 0 15px;
+            font-size: 17px;
+            font-weight: 400;
+            color: #333;
+            border: 1.5px solid #C7BEBE;
+            border-bottom-width: 2.5px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        .input-box input:focus,
+        .input-box input:valid {
+            border-color: #f3bf05;
+        }
+        form .policy {
+            display: flex;
+            align-items: center;
+        }
+        form h3 {
+            color: #ff0101;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        .input-box.button input {
+            color: #000000;
+            letter-spacing: 1px;
+            border: none;
+            background: #fec60c;
+            cursor: pointer;
+            font-weight: 700;
+        }
+        .input-box.button input:hover {
+            background: greenyellow;
+        }
+        .policy .ch {
+            margin-left: 110px;
+        }
+        form .text h3 {
+            color: #333;
+            width: 100%;
+            text-align: center;
+        }
+        form .text h3 a {
+            color: #ffa91e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        form .text h3 a:hover {
+            text-decoration: underline;
+        }
+        .h22 {
+            font-size: xx-large;
+            color: #e67e00;
+            font-weight: 700;
+            margin-left: -30px;
+        }
+        .error {
+            color: red;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+
+<script>
+    function validateForm() {
+        // Get values from the form fields
+        var name = document.getElementsByName('name')[0].value;
+        var email = document.getElementsByName('mail')[0].value;
+        var password = document.getElementsByName('pass')[0].value;
+
+        // Check if the name field is empty
+        if (name === '') {
+            alert("Enter Your Name, Please.");
+            return false;
+        }
+
+        // Check if the email field is empty or invalid
+        if (email === '') {
+            alert("Enter Your Email, Please.");
+            return false;
+        } else if (!validateEmail(email)) {
+            alert("Enter a valid Email.");
+            return false;
+        }
+
+        // Check if the password field is empty
+        if (password === '') {
+            alert("Enter Your Password, Please.");
+            return false;
+        }
+
+        // All validation checks passed
+        return true;
+    }
+
+    // Helper function to validate email format
+    function validateEmail(email) {
+        var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(String(email).toLowerCase());
+    }
+</script>
+
+
+</head>
+<body>
+<header>
+    <h2 class="h22">HoudaifaSchool</h2>
+    <span class="icon"><i class='bx bx-world' style='color:rgba(0,0,0,0.99)'></i></span>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="signup.html">Registration</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<div class="wrapper">
+    <h2>Registration</h2>
+    <form id="registrationForm" onsubmit="return validateForm()" method="post" action="signup.php">
+        <div class="input-box">
+            <input type="text" id="name"  name="name" placeholder="Enter your name" >
+         
+        </div>
+        <div class="input-box">
+            <input type="email" id="email" name="mail" placeholder="Enter your email">
+        </div>
+        <div class="input-box">
+            <input type="password" id="password" name="pass" placeholder="Enter your password" >
+        </div>
+        <div class="policy">
+            <input type="checkbox" class="ch" required>
+            <h3>I accept all terms</h3>
+        </div>
+        <div class="input-box button">
+            <input type="submit" value="Register">
+        </div>
+        <div class="text">
+            <h3>Already have an account? <a href="index.html">Log in</a></h3> </form>
+        </div>
+   
+</div>
+
+
+
+</body>
+</html>
